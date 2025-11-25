@@ -649,7 +649,7 @@ MonoBehaviour:
   m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &805326817
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &805326821
@@ -1132,15 +1132,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04cc6c91ff9eaf46a89617b1083e0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 1288423541}
   speed: 5
   dashSpeed: 20
   dashDuration: 0.25
-  maxDashCharges: 2
   dashCooldown: 5
   postDashInvincibleTime: 0.5
-  currentCharges: 0
-  dashTimers: []
-  gameOverCanvas: {fileID: 1288423541}
+  chargeCount: 2
 --- !u!212 &1556072011
 SpriteRenderer:
   m_ObjectHideFlags: 0
