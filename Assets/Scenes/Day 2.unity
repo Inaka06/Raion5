@@ -1734,7 +1734,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 657901541}
   ultimateSlider: {fileID: 324340912}
-  ultimateCharge: 0
+  ultimateCharge: 100
+  hitboxPrefab: {fileID: 3367482104641033509, guid: 1de366c0885146b4fb59351199b4fe10, type: 3}
   ultAnimator: {fileID: 657901542}
 --- !u!1 &1560216389
 GameObject:

@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Ultimate : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Ultimate : MonoBehaviour
     public Slider ultimateSlider;
     public float ultimateCharge = 0f;   
     private Coroutine ultimateCoroutine;
+    public GameObject hitboxPrefab;
+
     void Start()
     {
         ultimateSlider.maxValue = 100f;
@@ -44,6 +47,10 @@ public class Ultimate : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.G) && ultimateCharge >= ultimateSlider.maxValue)
         {
             ultAnimator.SetBool("isUlt", true);
+
+            GameObject hitbox = Instantiate(hitboxPrefab, shootingPoint.position, shootingPoint.rotation);
+            hitbox.transform.SetParent(shootingPoint);
+
             ultimateCharge = 0f;
             ultimateSlider.value = ultimateCharge;
             if(ultimateCoroutine != null)
