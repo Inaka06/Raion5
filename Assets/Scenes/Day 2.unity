@@ -3516,8 +3516,8 @@ MonoBehaviour:
   - {fileID: 2449913453563818258, guid: 761e3ab1acc46d340a90a6e133c925c3, type: 3}
   spawnWeights: []
   spawnInterval: 1
-  spawnBoundaryY: 4
-  spawnBoundaryX: 10
+  spawnBoundaryY: 7
+  spawnBoundaryX: 14
 --- !u!4 &1988793358
 Transform:
   m_ObjectHideFlags: 0
