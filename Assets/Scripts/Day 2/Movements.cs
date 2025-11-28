@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Movements : MonoBehaviour
 {
+    AudioManager audioManager;
+
     [Header("Movement")]
     public GameObject gameOverCanvas;
     public float speed = 5f;
@@ -67,7 +69,10 @@ public class Movements : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.dashSFXClip);
             TryDash();
+        }
 
         // update cooldown tiap charge
         foreach (var c in charges)
@@ -161,6 +166,7 @@ public class Movements : MonoBehaviour
             
             Destroy(gameObject, 0.2f);
             //ledakan klo mati
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.boomSFXClip);
             GameObject explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(explosion, 1f);
 

@@ -3,15 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public void onRestart()
     {
+        audioManager.PlaySFX(audioManager.clickSFXClip);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
     }
 
     public void onMenu()
     {
+        audioManager.PlaySFX(audioManager.closeSFXClip);
         SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1f;
     }
 }

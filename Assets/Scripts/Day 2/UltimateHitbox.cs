@@ -3,6 +3,7 @@ using System.Collections;
 
 public class UltimateHitbox : MonoBehaviour
 {
+    AudioManager audioManager;
     public float lifeTime = 0.3f;
     public GameObject explosionPrefab;
 
@@ -30,6 +31,7 @@ public class UltimateHitbox : MonoBehaviour
         
         if(other.CompareTag("Enemy"))//animasi ledakan
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.boomSFXClip);
             GameObject explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(explosion, 1f);
         }
