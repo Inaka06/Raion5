@@ -2,45 +2,33 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    public float spawnInterval = 1f;
+    public GameObject EnemyPrefab;
 
-    private float sinceLastSpawn = 0f;
+    public float SpawnInterval = 3f;
 
-    [Header("Spawn Boundary")]
-    public float spawnBoundaryY = 4f;
+    private float SinceLastSpawn = 0; 
+
+    public float spawnBoundaryY = 5f;
     public float spawnBoundaryX = 10f;
 
     void Update()
     {
-        sinceLastSpawn += Time.deltaTime;
-
-        if (sinceLastSpawn >= spawnInterval)
+        SinceLastSpawn += Time.deltaTime;
+        if (SinceLastSpawn >= SpawnInterval)
         {
             SpawnEnemy();
-            sinceLastSpawn = 0f;
+            SinceLastSpawn = 0;
         }
     }
-
     void SpawnEnemy()
     {
-        if (enemyPrefab == null)
+        if(EnemyPrefab == null)
         {
-            Debug.Log("Spawner Error: enemyPrefab is null!");
+            Debug.Log("Prefab Enemy nggak ada, tambahin dulu wok");
             return;
         }
-
-        Camera cam = Camera.main;
-
-        float randomY = Random.Range(-spawnBoundaryY, spawnBoundaryY);
-
-        // Spawn di kanan kamera
-        float xPos = cam.transform.position.x + spawnBoundaryX;
-        float yPos = cam.transform.position.y + randomY;
-
-        Vector3 spawnPosition = new Vector3(xPos, yPos, 0f);
-
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        float RandomY = Random.Range(-spawnBoundaryY, spawnBoundaryY);
+        Vector3 spawnPosition = new Vector3(spawnBoundaryX, RandomY, 0);
+        GameObject enemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
     }
-
 }

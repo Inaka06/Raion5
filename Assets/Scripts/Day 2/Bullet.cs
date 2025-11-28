@@ -2,18 +2,28 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private Vector3 direction;
-    [SerializeField] private float speed;
-    private float lifetime = 5f;
+    public bool isPlayerBullet = true; 
+    public float lifetime = 3f;
 
-    private void Update()
+    void Start()
     {
-        transform.position += direction * speed * Time.deltaTime;
-        lifetime -= Time.deltaTime;
-        if (lifetime <= 0f)
+        Destroy(gameObject, lifetime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isPlayerBullet && collision.CompareTag("Enemy"))
         {
+            GameManager.instance.AddScore(10);
+
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
+        if (!isPlayerBullet && collision.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }
-
 }

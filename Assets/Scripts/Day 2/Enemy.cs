@@ -7,25 +7,27 @@ public class Enemy : MonoBehaviour
     private float fireCountdown = 0f;
     private Vector3 lastDirection = Vector3.up;
     private int facing = 1;
+
     Rigidbody2D rb;
 
-    public GameObject enemyBulletPrefab;
+    public GameObject enemyBulletPrefab;   
 
-    
     void Update()
     {
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-        fireCountdown += Time.deltaTime;
-        if(fireCountdown >= fireRate)
+
+        fireCountdown -= Time.deltaTime;
+        if (fireCountdown <= 0)
         {
             Shoot();
-            fireCountdown = 0;
+            fireCountdown = fireRate;
         }
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
         float yRot = transform.eulerAngles.y;
         if (Mathf.Approximately(Mathf.DeltaAngle(yRot, 180f), 0f) || transform.localScale.x < 0f)
         {
@@ -60,6 +62,7 @@ public class Enemy : MonoBehaviour
             }
 
             bullet.transform.rotation = Quaternion.Euler(0, 0, -90);
+            bullet.GetComponent<Bullet>().isPlayerBullet = false;
         }
     }
 
@@ -67,5 +70,4 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
