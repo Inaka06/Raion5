@@ -11,6 +11,8 @@ public class Ultimate : MonoBehaviour
     private Coroutine ultimateCoroutine;
     public GameObject hitboxPrefab;
 
+    AudioManager audioManager;
+
     void Start()
     {
         ultimateSlider.maxValue = 100f;
@@ -46,6 +48,8 @@ public class Ultimate : MonoBehaviour
         //ultimate press g
         if(Input.GetKeyDown(KeyCode.G) && ultimateCharge >= ultimateSlider.maxValue)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.ultimateSFXClip);
+            
             ultAnimator.SetBool("isUlt", true);
 
             GameObject hitbox = Instantiate(hitboxPrefab, shootingPoint.position, shootingPoint.rotation);

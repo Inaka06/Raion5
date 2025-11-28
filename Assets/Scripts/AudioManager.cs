@@ -9,6 +9,11 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip backgroundMusicClip;
     public AudioClip clickSFXClip;
+    public AudioClip closeSFXClip;
+    public AudioClip boomSFXClip;
+    public AudioClip shootSFXClip;
+    public AudioClip ultimateSFXClip;
+    public AudioClip dashSFXClip;
 
     public static AudioManager Instance; //biar gk dobel dobel lagunya
 
@@ -29,5 +34,10 @@ public class AudioManager : MonoBehaviour
     {
         backgroundMusicSource.clip = backgroundMusicClip;
         backgroundMusicSource.Play();
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        sfxSource.PlayOneShot(clip);
     }
 }
