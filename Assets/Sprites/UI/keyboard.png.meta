@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f4e0a06895e2013478e081e0b7e53153
+guid: df0bd74cbbdf06343a3d36766c0af602
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5491632663426174961
-    second: tile_0015_0
+      213: 1084870471915973256
+    second: keyboard_0
+  - first:
+      213: -5690122954830693929
+    second: keyboard_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile_0015_0
+      name: keyboard_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 32
-        height: 16
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,30 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f00fc83403dc9c3b0800000000000000
-      internalID: -5491632663426174961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_0015_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7766c824f8284b4a8f8f5772e0b7c47
-      internalID: -587606968
+      spriteID: 88aacd142fb3e0f00800000000000000
+      internalID: 1084870471915973256
       vertices: []
       indices: 
       edges: []
@@ -147,7 +128,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95d41acec8c3f8c4f9617719156738c9
+    spriteID: cb3720f2ac6cdef488e8644269e95e1b
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +138,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tile_0015_0: -5491632663426174961
-      tile_0015_1: -587606968
+      keyboard_0: 1084870471915973256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,58 @@
 fileFormatVersion: 2
-guid: f4e0a06895e2013478e081e0b7e53153
+guid: 49f902a955d95454bb1eb0139fa683b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5491632663426174961
-    second: tile_0015_0
+      213: -6329402310222255761
+    second: raionAcademyLogo-removebg-preview_0
+  - first:
+      213: -2327217433079867440
+    second: raionAcademyLogo-removebg-preview_1
+  - first:
+      213: -2654560247471769862
+    second: raionAcademyLogo-removebg-preview_2
+  - first:
+      213: 6778015388016632579
+    second: raionAcademyLogo-removebg-preview_3
+  - first:
+      213: -6540754360206400632
+    second: raionAcademyLogo-removebg-preview_4
+  - first:
+      213: 6224757062378272754
+    second: raionAcademyLogo-removebg-preview_5
+  - first:
+      213: -1008254007324432277
+    second: raionAcademyLogo-removebg-preview_6
+  - first:
+      213: 4916945414150655362
+    second: raionAcademyLogo-removebg-preview_7
+  - first:
+      213: 6408720192382382468
+    second: raionAcademyLogo-removebg-preview_8
+  - first:
+      213: -8547562791362584793
+    second: raionAcademyLogo-removebg-preview_9
+  - first:
+      213: 3543895100164622327
+    second: raionAcademyLogo-removebg-preview_10
+  - first:
+      213: -320542089445832345
+    second: raionAcademyLogo-removebg-preview_11
+  - first:
+      213: -7601188165773301820
+    second: raionAcademyLogo-removebg-preview_12
+  - first:
+      213: -4232586678916235512
+    second: raionAcademyLogo-removebg-preview_13
+  - first:
+      213: -2387659332338868485
+    second: raionAcademyLogo-removebg-preview_14
+  - first:
+      213: 3094654472051631560
+    second: raionAcademyLogo-removebg-preview_15
+  - first:
+      213: 4332819762498251733
+    second: raionAcademyLogo-removebg-preview_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +85,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +123,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile_0015_0
+      name: raionAcademyLogo-removebg-preview_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 32
-        height: 16
+        y: 0
+        width: 738
+        height: 297
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,30 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f00fc83403dc9c3b0800000000000000
-      internalID: -5491632663426174961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_0015_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7766c824f8284b4a8f8f5772e0b7c47
-      internalID: -587606968
+      spriteID: f696aaa22227928a0800000000000000
+      internalID: -6329402310222255761
       vertices: []
       indices: 
       edges: []
@@ -147,7 +173,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95d41acec8c3f8c4f9617719156738c9
+    spriteID: 6fe89f67d171c75438055698f7136cd0
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +183,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tile_0015_0: -5491632663426174961
-      tile_0015_1: -587606968
+      raionAcademyLogo-removebg-preview_0: -6329402310222255761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
