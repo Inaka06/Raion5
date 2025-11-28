@@ -6,6 +6,8 @@ public class Movements : MonoBehaviour
 
     [Header("Movement")]
     public GameObject gameOverCanvas;
+    public GameObject abilitiesBar;
+    public GameObject ultimateBar;
     public float speed = 5f;
 
     [Header("Dash Settings")]
@@ -173,6 +175,8 @@ public class Movements : MonoBehaviour
             Time.timeScale = 1f;
             if (gameOverCanvas != null)
                 gameOverCanvas.SetActive(true);
+                abilitiesBar.SetActive(false);
+                ultimateBar.SetActive(false);
         }
     }
 

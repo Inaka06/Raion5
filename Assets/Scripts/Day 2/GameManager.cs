@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text scoreText;     
     public TMP_Text highScoreText;  
+    public TMP_Text scoreCount;  
 
     void Awake()
     {
@@ -37,9 +38,10 @@ public class GameManager : MonoBehaviour
     void UpdateUI()
     {
         if (scoreText != null)
-            scoreText.text = "Score : " + score;
+            scoreText.text = "SCORE: " + score;
+            scoreCount.text = score.ToString();
 
         if (highScoreText != null)
-            highScoreText.text = "High Score : " + highScore;
+            highScoreText.text = "HIGHSCORE: " + highScore;
     }
 }
