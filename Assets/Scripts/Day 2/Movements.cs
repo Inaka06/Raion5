@@ -18,6 +18,7 @@ public class Movements : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] private Animator animator;
+    public GameObject explosionPrefab;
 
     private bool isDashing = false;
     private float dashTimeLeft = 0f;
@@ -136,8 +137,13 @@ public class Movements : MonoBehaviour
         {
             // Debug test
             Debug.Log("Player Hit!");
+            
+            Destroy(gameObject, 0.2f);
+            //ledakan klo mati
+            GameObject explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            Destroy(explosion, 1f);
 
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
             if (gameOverCanvas != null)
                 gameOverCanvas.SetActive(true);
         }

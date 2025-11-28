@@ -4,6 +4,7 @@ using System.Collections;
 public class UltimateHitbox : MonoBehaviour
 {
     public float lifeTime = 0.3f;
+    public GameObject explosionPrefab;
 
     void Start()
     {
@@ -13,11 +14,10 @@ public class UltimateHitbox : MonoBehaviour
 
     IEnumerator ActivateHitbox()
     {
-        Collider c = GetComponent<Collider>();
+        Collider2D c = GetComponent<Collider2D>();
         c.enabled = false;
 
         yield return new WaitForSeconds(0.5f);
-
         c.enabled = true;
     }
 
@@ -26,6 +26,12 @@ public class UltimateHitbox : MonoBehaviour
         if(other.CompareTag("Enemy") || other.CompareTag("EnemyBullet"))
         {
             Destroy(other.gameObject);
+        }
+        
+        if(other.CompareTag("Enemy"))//animasi ledakan
+        {
+            GameObject explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            Destroy(explosion, 1f);
         }
     }
 
