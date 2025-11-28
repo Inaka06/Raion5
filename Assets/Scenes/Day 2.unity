@@ -2726,17 +2726,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.012635738, y: -0.040960252}
+  m_Offset: {x: -0.006356567, y: -0.027217157}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.19, y: 0.43}
+    oldSize: {x: 0.79333335, y: 0.28666666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1980188, y: 0.40513092}
+  m_Size: {x: 0.7836507, y: 0.233846}
   m_EdgeRadius: 0
 --- !u!50 &1556072014
 Rigidbody2D:
@@ -3299,8 +3299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2449913453563818258, guid: 746a74c4af39f434094f56df2e4dbfc1, type: 3}
   spawnInterval: 1
-  spawnBoundaryY: 4
-  spawnBoundaryX: 10
+  spawnBoundaryY: 7
+  spawnBoundaryX: 14
 --- !u!4 &1988793358
 Transform:
   m_ObjectHideFlags: 0
