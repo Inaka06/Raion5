@@ -2593,6 +2593,7 @@ GameObject:
   - component: {fileID: 1556072019}
   - component: {fileID: 1556072018}
   - component: {fileID: 1556072017}
+  - component: {fileID: 1556072020}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2850,6 +2851,22 @@ MonoBehaviour:
   planeRed: {fileID: 7108339969198208228, guid: 7e4a100955f31774389a3131a645b0ca, type: 3}
   planeBlue: {fileID: 7108339969198208228, guid: 8583249aafb07644aa691fe56ee029fe, type: 3}
   spriteResolver: {fileID: 1556072018}
+--- !u!114 &1556072020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556072009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecffc87d9687760459ac1b68534761c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4857527596803536722, guid: 97190a1765b44624ca4273730e63c96b, type: 3}
+  firePoint: {fileID: 657901541}
+  shootForce: 10
+  shootCooldown: 0.25
 --- !u!1 &1560216389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,6 +2878,7 @@ GameObject:
   - component: {fileID: 1560216392}
   - component: {fileID: 1560216391}
   - component: {fileID: 1560216390}
+  - component: {fileID: 1560216393}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2929,6 +2947,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1560216393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560216389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bd301c329958949b5f252056108c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  highScore: 0
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!1 &1601299367
 GameObject:
   m_ObjectHideFlags: 0
