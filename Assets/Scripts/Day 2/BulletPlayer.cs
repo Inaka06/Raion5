@@ -11,14 +11,17 @@ public class BulletPlayer : MonoBehaviour
     {
         Destroy(gameObject, lifetime);
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Bullet hit: " + other.tag);
 
         if(other.CompareTag("Enemy") || other.CompareTag("EnemyBullet"))
         {
             Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            GameManager.instance.AddScore(10);
         }
         
         if(other.CompareTag("Enemy"))//animasi ledakan
@@ -27,20 +30,4 @@ public class BulletPlayer : MonoBehaviour
             Destroy(explosion, 1f);
         }
     }
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     if (collision.CompareTag("Enemy"))
-    //     {
-    //         GameManager.instance.AddScore(10);
-
-    //         Destroy(collision.gameObject);
-    //         Destroy(gameObject);
-    //     }
-
-    //     if (!isPlayerBullet && collision.CompareTag("Player"))
-    //     {
-    //         Destroy(collision.gameObject);
-    //         Destroy(gameObject);
-    //     }
-    // }
 }
