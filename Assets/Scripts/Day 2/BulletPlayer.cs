@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class BulletPlayer : MonoBehaviour
 {
+
+    AudioManager audioManager;
+
     public bool isPlayerBullet = true; 
     public float lifetime = 3f;
 
@@ -14,20 +17,17 @@ public class BulletPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if(other.CompareTag("Enemy") || other.CompareTag("EnemyBullet"))
-        {
-            Destroy(other.gameObject);
-        }
-
-        if (other.CompareTag("Enemy"))
-        {
-            GameManager.instance.AddScore(10);
-        }
         
         if(other.CompareTag("Enemy"))//animasi ledakan
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.boomSFXClip);
             GameObject explosion = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(explosion, 1f);
+        }
+
+        if(other.CompareTag("Enemy") || other.CompareTag("EnemyBullet"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }

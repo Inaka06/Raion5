@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerShoot2D : MonoBehaviour
 {
+
+    AudioManager audioManager;
+
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float shootForce = 10f;
@@ -14,6 +17,7 @@ public class PlayerShoot2D : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && Time.time >= nextShootTime)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.shootSFXClip);
             Shoot();
             nextShootTime = Time.time + shootCooldown;
         }
